@@ -7,7 +7,7 @@ Folder `experiment` berisi beberapa proof-of-concept dan skrip HTA/Powershell ya
 
 ## Isi folder
 
-- `cobalagi.hta` - skrip VBScript HTA yang membuka file lokal dan mengirimkan isinya ke server web melalui HTTP GET.
+- `bacafile.hta` - skrip VBScript HTA yang membuka file lokal dan mengirimkan isinya ke server web melalui HTTP GET.
 - `revshell.hta` - HTA yang menjalankan `powershell` untuk mendownload dan menjalankan `shell.ps1` dari server jarak jauh.
 - `shell.ps1` - skrip Powershell reverse shell yang membuka koneksi ke server dan menyediakan shell interaktif balik.
 - `test.hta` - HTA sederhana yang menampilkan pesan `Halo! Ini dijalankan via mshta.exe` sebagai PoC.
